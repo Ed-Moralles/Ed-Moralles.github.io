@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ed Moralles</title>
+        <script src="https://kit.fontawesome.com/8529a63d37.js" crossorigin="anonymous"></script>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: michroma;
+                color: white;
+                background: #282a36;
+            }
+
+            header {
+                border: 3px solid white;
+                border-radius: 4px;
+                text-align: center;
+                letter-spacing: 30px;
+            }
+
+            .tab {
+                margin: 20px;
+                text-align: center;
+            }
+
+            .tab button {
+                margin-right: 15px;
+                background-color: inherit;
+                color: white;
+                border-radius: 4px;
+                padding: 14px 60px;
+            }
+
+            .tab button:hover {
+                background-color: #ddd;
+                color: #282a36;
+            }
+
+            .tabcontent {
+                padding: 6px 12px;
+                text-align: justify;
+            }
+
+            .responsive {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 24px;
+                border-radius: 4px;               
+            }
+
+            footer {
+                border: 3px solid white;
+                border-radius: 4px;
+                text-align: center;
+            }    
+
+
+            @media screen and (max-width: 480px) {
+          header {letter-spacing: 0px;}
+          .tab {margin-top: 20px; margin-left: 0px; margin-bottom: 0px; margin-right: 0px;}
+          .tab button {float: left; width: 100%; margin-right: 0px; margin-bottom: 15px;}
+          img {width: 100%; height: auto;}
+}
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Ed Moralles</h1>
+        </header>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openMenu(event, 'Home')">HOME</button>
+            <button class="tablinks" onclick="openMenu(event, 'Sobre')">SOBRE</button>
+            <button class="tablinks" onclick="openMenu(event, 'Contato')">CONTATO</button>
+        </div>
+
+        <div id="Home" class="tabcontent">
+            <img src="figuras/cyber1.jpg" alt="nature" class="responsive">
+        </div>
+
+        <div id="Sobre" class="tabcontent">
+            <h2>Apresentação</h2>
+            <p>Meu nome é Edgar, sou natural da Bolívia mas brasileiro de coração. Cheguei ao Brasil não tinha nem um ano, passei minha infância em SP e hoje moro no interior de São Paulo. Bem antes de começar minha graduação de Tecnólogo em Analíse e Desenvolvimento de Sistemas passei por várias profissões todas elas como Operador de Máquinas de vários setores e neste meio tempo cheguei a estudar Administração, mas não completei por ver que não era o que eu queria. Em 2007 abri minha empresa como Torneiro Mecânico junto com meu pai, que me ensinou os detalhe da profissão que não foi difícil porque trabalhar com máquinas fazia parte de minha vida profissional. E foi ai que começou meu contato com a informática. Em 2015 encontrei a minha metade e me casei com ela, em 2018 encerrei minha empresa e disposto a recomeçar e com grande apoio de minha esposa entrei na faculdade e encontrei a minha profissão na área da tecnologia. </p>
+        </div>
+
+        <div id="Contato" class="tabcontent">
+            <img src="fig1/github-brands.svg" alt="github" style=" height: 5em;  display: table; margin: 10px auto 10px;">
+            <p style="text-align: center;"><a style="color: white; text-decoration: none; font-size: 20px;" href="https://github.com/Ed-Moralles" target="_blank">GITHUB</a></p>
+            <img src="fig1/envelope-square-solid.svg" alt="envelope" style=" height: 5em;  display: table; margin: 10px auto 10px;">
+            <p style="text-align: center; font-size: 20px;">moralles.tapia@gmail.com</p>
+        </div>
+
+        <script>
+            function openMenu(evt, menuName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(menuName).style.display = "block";
+                evt.currentTarget.className += "active";
+            }
+
+        </script>
+
+        <footer>
+            <p>Imagem de <a href="https://pixabay.com/pt/users/TheDigitalArtist-202249/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3400789">Pete Linforth</a> por <a href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3400789">Pixabay</a> -  2020 &#169 Ed Moralles</p>  
+           
+        </footer>
+
+    </body>
+</html> 
